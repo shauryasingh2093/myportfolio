@@ -66,6 +66,21 @@
     .classy-subheading {
         @apply tracking-[0.05em] uppercase text-sm font-semibold opacity-80;
     }
+
+    /* Vertical Scroll Animation */
+    @keyframes vertical-scroll {
+        0% {
+            transform: translateY(0);
+        }
+
+        100% {
+            transform: translateY(-50%);
+        }
+    }
+
+    .scroll-animation {
+        animation: vertical-scroll 30s linear infinite;
+    }
 }
 
 @layer utilities {
