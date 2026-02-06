@@ -52,6 +52,53 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   `;
   document.head.appendChild(style);
+
+  // Mobile Menu Logic
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  const menuOverlay = document.getElementById('menu-overlay');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  const toggleMenu = (open: boolean) => {
+    if (mobileMenu) {
+      if (open) {
+        mobileMenu.classList.remove('translate-x-full');
+        document.body.style.overflow = 'hidden';
+      } else {
+        mobileMenu.classList.add('translate-x-full');
+        document.body.style.overflow = 'auto';
+      }
+    }
+  };
+
+  menuToggle?.addEventListener('click', () => toggleMenu(true));
+  menuClose?.addEventListener('click', () => toggleMenu(false));
+  menuOverlay?.addEventListener('click', () => toggleMenu(false));
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => toggleMenu(false));
+  });
+
+  // Navbar Visibility Logic (Home only)
+  const navbar = document.querySelector('nav');
+  if (navbar) {
+    const homeSection = document.getElementById('home');
+    window.addEventListener('scroll', () => {
+      if (homeSection) {
+        const homeRect = homeSection.getBoundingClientRect();
+        // Hide navbar if home section is mostly scrolled out or if we've scrolled past it
+        // Adding a small buffer for smoother transition
+        if (homeRect.bottom <= 100) {
+          navbar.style.opacity = '0';
+          navbar.style.pointerEvents = 'none';
+        } else {
+          navbar.style.opacity = '1';
+          navbar.style.pointerEvents = 'auto';
+        }
+      }
+    });
+  }
 });
 
 // Modal Logic for Case Studies

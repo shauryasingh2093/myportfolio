@@ -9,6 +9,9 @@
     --color-dark: #4A3440;
     --color-mauve-soft: #DDBDCF;
     --color-mauve-deep: #8E6A7D;
+    --color-plum: #4A3440;
+    --color-rose-light: #FDF4F7;
+    --color-midnight: #2D1B24;
 
     --font-sans: "Plus Jakarta Sans", sans-serif;
     --font-serif: "Playfair Display", serif;
@@ -19,6 +22,9 @@
     --shadow-neumorphic-dark: -10px -10px 30px rgba(255, 255, 255, 0.15), 10px 10px 30px rgba(0, 0, 0, 0.3);
     --shadow-neumorphic-card: inset -5px -5px 15px rgba(255, 255, 255, 0.05), 10px 10px 30px rgba(0, 0, 0, 0.2);
     --shadow-neumorphic-card-hover: inset -5px -5px 15px rgba(255, 255, 255, 0.1), 15px 15px 40px rgba(0, 0, 0, 0.3);
+
+    --shadow-card-glass: 0 20px 40px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+    --shadow-card-glass-hover: 0 30px 60px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.4);
 }
 
 @layer base {
@@ -80,6 +86,19 @@
 
     .scroll-animation {
         animation: vertical-scroll 30s linear infinite;
+    }
+
+    /* Editorial Resume Styles */
+    .timeline-container {
+        @apply relative pl-8 border-l border-plum/10 ml-4;
+    }
+
+    .timeline-dot {
+        @apply absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full bg-plum ring-4 ring-plum/10;
+    }
+
+    .editorial-panel {
+        @apply bg-white/40 backdrop-blur-sm rounded-[32px] p-8 border border-white/60 shadow-card-glass transition-all duration-500 hover:-translate-y-1 hover:shadow-card-glass-hover hover:bg-white/60;
     }
 }
 

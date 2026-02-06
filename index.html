@@ -12,9 +12,11 @@
 <body>
     <!-- Nav -->
     <nav
-        class="fixed top-[30px] left-1/2 -translate-x-1/2 w-[90%] max-w-[1200px] flex justify-between items-center z-[1000] px-10 py-4 bg-white/20 backdrop-blur-md rounded-full border border-white/30">
-        <div class="font-medium">Shaurya.</div>
-        <ul class="flex gap-8 list-none">
+        class="fixed top-[20px] md:top-[30px] left-1/2 -translate-x-1/2 w-[95%] md:w-[90%] max-w-[1200px] flex justify-between items-center z-[1000] px-6 md:px-10 py-3 md:py-4 bg-white/20 backdrop-blur-md rounded-full border border-white/30 transition-all duration-300">
+        <div class="font-medium text-lg md:text-xl">Shaurya.</div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-8 list-none">
             <li><a href="#home"
                     class="no-underline text-gray-900 font-medium text-sm transition-opacity hover:opacity-60">Home</a>
             </li>
@@ -34,15 +36,57 @@
                     class="no-underline text-gray-900 font-medium text-sm transition-opacity hover:opacity-60">Contact</a>
             </li>
         </ul>
-        <div class="flex gap-5">
-            <a href="https://www.linkedin.com/in/shauryasingh2093" target="_blank" rel="noopener noreferrer"
-                class="text-gray-900 transition-opacity hover:opacity-60"><i class="fab fa-linkedin-in text-xl"></i></a>
-            <a href="https://in.pinterest.com/shaurya020singh/" target="_blank" rel="noopener noreferrer"
-                class="text-gray-900 transition-opacity hover:opacity-60"><i class="fab fa-pinterest text-xl"></i></a>
-            <a href="https://www.behance.net/shauryasingh2093" target="_blank" rel="noopener noreferrer"
-                class="text-gray-900 transition-opacity hover:opacity-60"><i class="fab fa-behance text-xl"></i></a>
+
+        <div class="flex items-center gap-3 md:gap-5">
+            <div class="hidden sm:flex gap-3 md:gap-5">
+                <a href="https://www.linkedin.com/in/shauryasingh2093" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-900 transition-opacity hover:opacity-60"><i
+                        class="fab fa-linkedin-in text-lg md:text-xl"></i></a>
+                <a href="https://in.pinterest.com/shaurya020singh/" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-900 transition-opacity hover:opacity-60"><i
+                        class="fab fa-pinterest text-lg md:text-xl"></i></a>
+                <a href="https://www.behance.net/shauryasingh2093" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-900 transition-opacity hover:opacity-60"><i
+                        class="fab fa-behance text-lg md:text-xl"></i></a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-toggle" class="md:hidden text-gray-900 focus:outline-none p-1">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 z-[1100] translate-x-full transition-transform duration-300 md:hidden">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" id="menu-overlay"></div>
+        <div class="absolute right-0 top-0 h-full w-[280px] bg-white p-8 shadow-2xl flex flex-col">
+            <div class="flex justify-between items-center mb-10">
+                <div class="font-medium text-xl">Shaurya.</div>
+                <button id="menu-close" class="text-gray-900 focus:outline-none">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <ul class="flex flex-col gap-6 list-none flex-grow">
+                <li><a href="#home" class="no-underline text-gray-900 font-medium text-lg mobile-link">Home</a></li>
+                <li><a href="#about" class="no-underline text-gray-900 font-medium text-lg mobile-link">About</a></li>
+                <li><a href="#process" class="no-underline text-gray-900 font-medium text-lg mobile-link">Work
+                        Process</a></li>
+                <li><a href="#projects" class="no-underline text-gray-900 font-medium text-lg mobile-link">Projects</a>
+                </li>
+                <li><a href="#resume" class="no-underline text-gray-900 font-medium text-lg mobile-link">Resume</a></li>
+                <li><a href="#contact" class="no-underline text-gray-900 font-medium text-lg mobile-link">Contact</a>
+                </li>
+            </ul>
+            <div class="flex gap-6 mt-auto">
+                <a href="https://www.linkedin.com/in/shauryasingh2093" target="_blank" class="text-gray-900 text-2xl"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://in.pinterest.com/shaurya020singh/" target="_blank" class="text-gray-900 text-2xl"><i
+                        class="fab fa-pinterest"></i></a>
+                <a href="https://www.behance.net/shauryasingh2093" target="_blank" class="text-gray-900 text-2xl"><i
+                        class="fab fa-behance"></i></a>
+            </div>
+        </div>
+    </div>
 
     <main>
         <!-- Hero Section -->
@@ -63,9 +107,10 @@
                 </div>
             </div>
 
-            <div class="relative z-[2] flex flex-col items-center">
-                <p class="text-xl md:text-2xl font-bold mb-4 text-[#111827] font-serif">Hey, It's shaurya Singh.</p>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl leading-tight font-bold font-serif text-[#111827]">UI/UX &
+            <div class="relative z-[2] flex flex-col items-center px-6">
+                <p class="text-lg md:text-xl lg:text-2xl font-bold mb-4 text-[#111827] font-serif">Hey, It's Shaurya
+                    Singh.</p>
+                <h1 class="text-3xl md:text-5xl lg:text-6xl leading-tight font-bold font-serif text-[#111827]">UI/UX &
                     Product Designer.</h1>
             </div>
             <div
@@ -78,29 +123,29 @@
 
         <!-- About Section -->
         <section id="about"
-            class="section-padding min-h-screen flex flex-col justify-center bg-about text-black grid grid-cols-2 items-center gap-[10%]">
-            <div>
-                <h2 class="text-5xl mb-5">About Me</h2>
-                <p class="text-base mb-8 opacity-90">
+            class="section-padding min-h-screen flex flex-col justify-center bg-about text-black grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-[10%]">
+            <div class="order-2 md:order-1">
+                <h2 class="text-4xl md:text-5xl mb-5">About Me</h2>
+                <p class="text-sm md:text-base mb-8 opacity-90">
                     I am a multi-disciplinary UI/UX & Product Designer based in India.
                     I specialize in crafting digital experiences that are not only
                     aesthetically pleasing but also deeply intuitive and functional.
                 </p>
-                <div class="my-8 bg-black/5 p-5 rounded-[20px] border border-black/10">
-                    <h3 class="text-xl mb-4 text-black">My Services</h3>
-                    <ul class="list-none grid grid-cols-2 gap-2.5">
-                        <li class="text-sm opacity-90">✦ User Interface Design</li>
-                        <li class="text-sm opacity-90">✦ Experience Strategy</li>
-                        <li class="text-sm opacity-90">✦ Branding & Identity</li>
-                        <li class="text-sm opacity-90">✦ Web Development</li>
+                <div class="my-6 md:my-8 bg-black/5 p-5 md:p-8 rounded-[20px] border border-black/10">
+                    <h3 class="text-lg md:text-xl mb-4 text-black font-semibold">My Services</h3>
+                    <ul class="list-none grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <li class="text-sm opacity-90 flex items-center gap-2">✦ User Interface Design</li>
+                        <li class="text-sm opacity-90 flex items-center gap-2">✦ Experience Strategy</li>
+                        <li class="text-sm opacity-90 flex items-center gap-2">✦ Branding & Identity</li>
+                        <li class="text-sm opacity-90 flex items-center gap-2">✦ Web Development</li>
                     </ul>
                 </div>
                 <p class="text-sm font-semibold flex items-center gap-2.5 before:content-['📍']">My Location: Noida,
                     India</p>
             </div>
-            <div class="relative flex justify-center">
+            <div class="relative flex justify-center order-1 md:order-2">
                 <div
-                    class="w-[450px] h-[450px] rounded-full border-[20px] border-white/10 p-1.5 shadow-[-20px_-20px_60px_rgba(255,255,255,0.1),20px_20px_60px_rgba(0,0,0,0.3)] overflow-hidden">
+                    class="w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px] rounded-full border-[10px] md:border-[20px] border-white/10 p-1 md:p-1.5 shadow-[-10px_-10px_30px_rgba(255,255,255,0.1),10px_10px_30px_rgba(0,0,0,0.3)] overflow-hidden transition-all duration-300">
                     <img src="/assets/profile.png" alt="Shaurya Singh"
                         class="w-full h-full object-cover rounded-full" />
                 </div>
@@ -109,33 +154,34 @@
 
         <!-- Work Process Section -->
         <section id="process"
-            class="section-padding min-h-screen flex flex-col justify-center bg-process text-black text-center">
-            <h2 class="text-5xl mb-2.5">My Work Process</h2>
-            <p class="text-base opacity-80 mb-[60px]">A collaborative journey from concept to reality.</p>
-            <div class="flex justify-center gap-8 flex-wrap">
+            class="section-padding min-h-screen flex flex-col justify-center bg-process text-black text-center py-20 md:py-32">
+            <h2 class="text-4xl md:text-5xl mb-3">My Work Process</h2>
+            <p class="text-sm md:text-base opacity-80 mb-10 md:mb-[60px]">A collaborative journey from concept to
+                reality.</p>
+            <div class="flex justify-center gap-6 md:gap-8 flex-wrap px-6">
                 <div
-                    class="w-[220px] h-[280px] bg-process rounded-[110px] flex flex-col justify-center items-center border border-white/10 shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.1),10px_10px_30px_rgba(0,0,0,0.2)] transition-all duration-[400ms] cubic-bezier(0.175,0.885,0.32,1.275) hover:-translate-y-4 hover:scale-[1.02] hover:shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.2),15px_15px_40px_rgba(0,0,0,0.3)]">
-                    <span class="text-5xl font-serif mb-2.5">1.</span>
-                    <span class="font-semibold text-lg">Research</span>
-                    <span class="text-sm opacity-70">Gathering insights</span>
+                    class="w-[160px] h-[220px] sm:w-[200px] sm:h-[260px] md:w-[220px] md:h-[280px] bg-process rounded-[80px] sm:rounded-[100px] md:rounded-[110px] flex flex-col justify-center items-center border border-white/10 shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.1),10px_10px_30px_rgba(0,0,0,0.2)] transition-all duration-[400ms] cubic-bezier(0.175,0.885,0.32,1.275) hover:-translate-y-4 hover:scale-[1.02]">
+                    <span class="text-4xl md:text-5xl font-serif mb-2.5">1.</span>
+                    <span class="font-semibold text-base md:text-lg">Research</span>
+                    <span class="text-xs md:text-sm opacity-70">Gathering insights</span>
                 </div>
                 <div
-                    class="w-[220px] h-[280px] bg-process rounded-[110px] flex flex-col justify-center items-center border border-white/10 shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.1),10px_10px_30px_rgba(0,0,0,0.2)] transition-all duration-[400ms] cubic-bezier(0.175,0.885,0.32,1.275) hover:-translate-y-4 hover:scale-[1.02] hover:shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.2),15px_15px_40px_rgba(0,0,0,0.3)]">
-                    <span class="text-5xl font-serif mb-2.5">2.</span>
-                    <span class="font-semibold text-lg">Wireframe</span>
-                    <span class="text-sm opacity-70">Defining structure</span>
+                    class="w-[160px] h-[220px] sm:w-[200px] sm:h-[260px] md:w-[220px] md:h-[280px] bg-process rounded-[80px] sm:rounded-[100px] md:rounded-[110px] flex flex-col justify-center items-center border border-white/10 shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.1),10px_10px_30px_rgba(0,0,0,0.2)] transition-all duration-[400ms] cubic-bezier(0.175,0.885,0.32,1.275) hover:-translate-y-4 hover:scale-[1.02]">
+                    <span class="text-4xl md:text-5xl font-serif mb-2.5">2.</span>
+                    <span class="font-semibold text-base md:text-lg">Wireframe</span>
+                    <span class="text-xs md:text-sm opacity-70">Defining structure</span>
                 </div>
                 <div
-                    class="w-[220px] h-[280px] bg-process rounded-[110px] flex flex-col justify-center items-center border border-white/10 shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.1),10px_10px_30px_rgba(0,0,0,0.2)] transition-all duration-[400ms] cubic-bezier(0.175,0.885,0.32,1.275) hover:-translate-y-4 hover:scale-[1.02] hover:shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.2),15px_15px_40px_rgba(0,0,0,0.3)]">
-                    <span class="text-5xl font-serif mb-2.5">3.</span>
-                    <span class="font-semibold text-lg">Design</span>
-                    <span class="text-sm opacity-70">Creating visuals</span>
+                    class="w-[160px] h-[220px] sm:w-[200px] sm:h-[260px] md:w-[220px] md:h-[280px] bg-process rounded-[80px] sm:rounded-[100px] md:rounded-[110px] flex flex-col justify-center items-center border border-white/10 shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.1),10px_10px_30px_rgba(0,0,0,0.2)] transition-all duration-[400ms] cubic-bezier(0.175,0.885,0.32,1.275) hover:-translate-y-4 hover:scale-[1.02]">
+                    <span class="text-4xl md:text-5xl font-serif mb-2.5">3.</span>
+                    <span class="font-semibold text-base md:text-lg">Design</span>
+                    <span class="text-xs md:text-sm opacity-70">Creating visuals</span>
                 </div>
                 <div
-                    class="w-[220px] h-[280px] bg-process rounded-[110px] flex flex-col justify-center items-center border border-white/10 shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.1),10px_10px_30px_rgba(0,0,0,0.2)] transition-all duration-[400ms] cubic-bezier(0.175,0.885,0.32,1.275) hover:-translate-y-4 hover:scale-[1.02] hover:shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.2),15px_15px_40px_rgba(0,0,0,0.3)]">
-                    <span class="text-5xl font-serif mb-2.5">4.</span>
-                    <span class="font-semibold text-lg">Deliver</span>
-                    <span class="text-sm opacity-70">Handoff & launch</span>
+                    class="w-[160px] h-[220px] sm:w-[200px] sm:h-[260px] md:w-[220px] md:h-[280px] bg-process rounded-[80px] sm:rounded-[100px] md:rounded-[110px] flex flex-col justify-center items-center border border-white/10 shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.1),10px_10px_30px_rgba(0,0,0,0.2)] transition-all duration-[400ms] cubic-bezier(0.175,0.885,0.32,1.275) hover:-translate-y-4 hover:scale-[1.02]">
+                    <span class="text-4xl md:text-5xl font-serif mb-2.5">4.</span>
+                    <span class="font-semibold text-base md:text-lg">Deliver</span>
+                    <span class="text-xs md:text-sm opacity-70">Handoff & launch</span>
                 </div>
             </div>
         </section>
@@ -143,207 +189,388 @@
         <!-- Projects Section -->
         <section id="projects"
             class="section-padding min-h-screen flex flex-col justify-center bg-gradient-to-br from-process to-mauve-deep text-black">
-            <div class="text-center mb-[60px]">
-                <h2 class="text-5xl mb-2.5">Featured Projects</h2>
-                <p class="text-base opacity-80">A selection of my recent design work</p>
+            <div class="text-center mb-10 md:mb-[60px] px-6">
+                <h2 class="text-4xl md:text-5xl mb-3">Featured Projects</h2>
+                <p class="text-sm md:text-base opacity-80">A selection of my recent design work</p>
             </div>
-            <div class="grid grid-cols-[repeat(auto-fit,minmax(380px,1fr))] gap-[35px] max-w-[1200px] mx-auto">
-                <!-- Project Card: Bloomroom (Case Study) -->
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-[1240px] mx-auto px-6 items-stretch">
+                <!-- Project Card: Bloomroom (Featured) -->
                 <div
-                    class="bg-process rounded-custom overflow-visible border border-white/10 shadow-neumorphic-card transition-all duration-[400ms] cubic-bezier(0.175,0.885,0.32,1.275) hover:-translate-y-3 hover:shadow-neumorphic-card-hover">
+                    class="lg:col-span-1 bg-rose-light/50 backdrop-blur-md rounded-[40px] overflow-hidden border border-white/40 shadow-card-glass transition-all duration-[500ms] hover:-translate-y-2 hover:shadow-card-glass-hover group flex flex-col relative">
+                    <!-- Featured Badge -->
                     <div
-                        class="relative w-[calc(100%-40px)] h-[240px] mx-5 mt-5 overflow-hidden rounded-[40px] bg-white/5 shadow-[inset_-3px_-3px_10px_rgba(255,255,255,0.1),inset_3px_3px_10px_rgba(0,0,0,0.1)] group">
+                        class="absolute top-4 left-4 z-20 px-3 py-1 bg-plum text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg">
+                        ✨ Featured Project
+                    </div>
+                    <div
+                        class="relative w-full h-[280px] overflow-hidden group/img bg-black/5 flex items-center justify-center p-2">
                         <video src="/assets/v1.mp4" autoplay loop muted playsinline
-                            class="w-full h-full object-cover transition-all duration-[600ms] group-hover:scale-[1.08] group-hover:opacity-85"></video>
+                            class="w-full h-full object-contain transition-transform duration-[800ms] group-hover:scale-105"></video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-plum/20 to-transparent"></div>
                         <div
-                            class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-dark/85 to-mauve-deep/85 backdrop-blur-[5px] flex justify-center items-center opacity-0 transition-opacity duration-400 group-hover:opacity-100">
+                            class="absolute inset-0 bg-gradient-to-t from-plum/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <div
+                            class="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
                             <button onclick="openModal('bloomroom-case-study')"
-                                class="px-8 py-3.5 bg-white text-dark no-underline rounded-[30px] font-semibold text-sm transition-all duration-300 shadow-[0_5px_20px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.5)] hover:scale-[1.08] hover:shadow-[0_8px_25px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.5)] cursor-pointer">View
+                                class="px-7 py-3 bg-white text-plum rounded-full font-bold text-xs uppercase tracking-wider shadow-xl hover:scale-105 transition-transform cursor-pointer">View
                                 Case Study</button>
                         </div>
                     </div>
-                    <div class="p-[25px_30px_30px]">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-2xl text-black font-serif font-bold">Bloomroom</h3>
-                            <span class="text-xs uppercase tracking-widest opacity-60 mt-1">Design System • 2025</span>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-baseline mb-3">
+                            <h3
+                                class="text-2xl text-midnight font-serif font-bold group-hover:text-plum transition-colors">
+                                Bloomroom</h3>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-plum/50">2025</span>
                         </div>
-                        <p class="text-sm leading-[1.7] opacity-80 mb-5">A digital house for planning, calm & growth.
-                            Crafting a peaceful productivity experience.</p>
-                        <div class="flex flex-wrap gap-2">
+                        <p class="text-sm leading-relaxed text-midnight/70 mb-6 flex-grow">A digital house for planning,
+                            calm & growth. Crafting a peaceful productivity experience.</p>
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-plum/5">
                             <span
-                                class="px-[18px] py-[7px] bg-white/8 rounded-[25px] text-xs font-medium border border-white/15 transition-all duration-300 shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.05),2px_2px_8px_rgba(0,0,0,0.1)] hover:bg-white/15 hover:-translate-y-0.5 hover:shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.1),3px_3px_10px_rgba(0,0,0,0.15)]">Product
-                                Design</span>
+                                class="px-3 py-1.5 bg-plum/5 text-plum rounded-full text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5 border border-plum/10 hover:bg-plum/10 transition-all">
+                                <i class="fas fa-paint-brush text-[8px]"></i> Product Design
+                            </span>
                             <span
-                                class="px-[18px] py-[7px] bg-white/8 rounded-[25px] text-xs font-medium border border-white/15 transition-all duration-300 shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.05),2px_2px_8px_rgba(0,0,0,0.1)] hover:bg-white/15 hover:-translate-y-0.5 hover:shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.1),3px_3px_10px_rgba(0,0,0,0.15)]">Case
-                                Study</span>
+                                class="px-3 py-1.5 bg-plum/5 text-plum rounded-full text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5 border border-plum/10 hover:bg-plum/10 transition-all">
+                                <i class="fas fa-book-open text-[8px]"></i> Case Study
+                            </span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Project Card: Nutriquest -->
                 <div
-                    class="bg-process rounded-custom overflow-visible border border-white/10 shadow-neumorphic-card transition-all duration-[400ms] cubic-bezier(0.175,0.885,0.32,1.275) hover:-translate-y-3 hover:shadow-neumorphic-card-hover">
+                    class="bg-rose-light/50 backdrop-blur-md rounded-[40px] overflow-hidden border border-white/40 shadow-card-glass transition-all duration-[500ms] hover:-translate-y-2 hover:shadow-card-glass-hover group flex flex-col">
                     <div
-                        class="relative w-[calc(100%-40px)] h-[240px] mx-5 mt-5 overflow-hidden rounded-[40px] bg-white/5 shadow-[inset_-3px_-3px_10px_rgba(255,255,255,0.1),inset_3px_3px_10px_rgba(0,0,0,0.1)] group">
-                        <img src="/assets/nutriquest_cover.png" alt="Nutriquest Cover"
-                            class="w-full h-full object-cover transition-all duration-[600ms] group-hover:scale-[1.08] group-hover:opacity-85" />
+                        class="relative w-full h-[280px] overflow-hidden group/img bg-black/5 flex items-center justify-center p-2">
+                        <img src="/assets/nutriquest_cover.png" alt="Nutriquest"
+                            class="w-full h-full object-contain transition-transform duration-[800ms] group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-plum/20 to-transparent"></div>
                         <div
-                            class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-dark/85 to-mauve-deep/85 backdrop-blur-[5px] flex justify-center items-center opacity-0 transition-opacity duration-400 group-hover:opacity-100">
+                            class="absolute inset-0 bg-gradient-to-t from-plum/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <div
+                            class="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
                             <button onclick="openModal('nutriquest-case-study')"
-                                class="px-8 py-3.5 bg-white text-dark no-underline rounded-[30px] font-semibold text-sm transition-all duration-300 shadow-[0_5px_20px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.5)] hover:scale-[1.08] hover:shadow-[0_8px_25px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.5)] cursor-pointer">View
+                                class="px-7 py-3 bg-white text-plum rounded-full font-bold text-xs uppercase tracking-wider shadow-xl hover:scale-105 transition-transform cursor-pointer">View
                                 Case Study</button>
                         </div>
                     </div>
-                    <div class="p-[25px_30px_30px]">
-                        <h3 class="text-2xl mb-3 text-black font-serif font-bold">Nutriquest</h3>
-                        <p class="text-sm leading-[1.7] opacity-80 mb-5">A web-based gamified learning roadmap that
-                            turns skill development into a structured, level-based progression system inspired by
-                            Duolingo-style learning loops.</p>
-                        <div class="flex flex-wrap gap-2">
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-baseline mb-3">
+                            <h3
+                                class="text-2xl text-midnight font-serif font-bold group-hover:text-plum transition-colors">
+                                Nutriquest</h3>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-plum/50">2024</span>
+                        </div>
+                        <p class="text-sm leading-relaxed text-midnight/70 mb-6 flex-grow">Gamified skill development
+                            roadmap inspired by Duolingo-style learning loops.</p>
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-plum/5">
                             <span
-                                class="px-[18px] py-[7px] bg-white/8 rounded-[25px] text-xs font-medium border border-white/15 transition-all duration-300 shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.05),2px_2px_8px_rgba(0,0,0,0.1)] hover:bg-white/15 hover:-translate-y-0.5 hover:shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.1),3px_3px_10px_rgba(0,0,0,0.15)]">UI/UX</span>
+                                class="px-3 py-1.5 bg-plum/5 text-plum rounded-full text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5 border border-plum/10 hover:bg-plum/10 transition-all">
+                                <i class="fas fa-layer-group text-[8px]"></i> UI/UX
+                            </span>
                             <span
-                                class="px-[18px] py-[7px] bg-white/8 rounded-[25px] text-xs font-medium border border-white/15 transition-all duration-300 shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.05),2px_2px_8px_rgba(0,0,0,0.1)] hover:bg-white/15 hover:-translate-y-0.5 hover:shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.1),3px_3px_10px_rgba(0,0,0,0.15)]">Gamification</span>
-                            <span
-                                class="px-[18px] py-[7px] bg-white/8 rounded-[25px] text-xs font-medium border border-white/15 transition-all duration-300 shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.05),2px_2px_8px_rgba(0,0,0,0.1)] hover:bg-white/15 hover:-translate-y-0.5 hover:shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.1),3px_3px_10px_rgba(0,0,0,0.15)]">Product
-                                Design</span>
+                                class="px-3 py-1.5 bg-plum/5 text-plum rounded-full text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5 border border-plum/10 hover:bg-plum/10 transition-all">
+                                <i class="fas fa-gamepad text-[8px]"></i> Gamification
+                            </span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project Card 4 -->
+                <!-- Project Card: Company Website -->
                 <div
-                    class="bg-process rounded-custom overflow-visible border border-white/10 shadow-neumorphic-card transition-all duration-[400ms] cubic-bezier(0.175,0.885,0.32,1.275) hover:-translate-y-3 hover:shadow-neumorphic-card-hover">
+                    class="bg-rose-light/50 backdrop-blur-md rounded-[40px] overflow-hidden border border-white/40 shadow-card-glass transition-all duration-[500ms] hover:-translate-y-2 hover:shadow-card-glass-hover group flex flex-col">
                     <div
-                        class="relative w-[calc(100%-40px)] h-[240px] mx-5 mt-5 overflow-hidden rounded-[40px] bg-white/5 shadow-[inset_-3px_-3px_10px_rgba(255,255,255,0.1),inset_3px_3px_10px_rgba(0,0,0,0.1)] group">
-                        <img src="/assets/w1.png" alt="Company Website Cover"
-                            class="w-full h-full object-cover object-top transition-all duration-[600ms] group-hover:scale-[1.08] group-hover:opacity-85" />
+                        class="relative w-full h-[280px] overflow-hidden group/img bg-black/5 flex items-center justify-center p-2">
+                        <img src="/assets/w1.png" alt="Company Website"
+                            class="w-full h-full object-contain transition-transform duration-[800ms] group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-plum/20 to-transparent"></div>
                         <div
-                            class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-dark/85 to-mauve-deep/85 backdrop-blur-[5px] flex justify-center items-center opacity-0 transition-opacity duration-400 group-hover:opacity-100">
+                            class="absolute inset-0 bg-gradient-to-t from-plum/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <div
+                            class="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
                             <button onclick="openModal('company-website-case-study')"
-                                class="px-8 py-3.5 bg-white text-dark no-underline rounded-[30px] font-semibold text-sm transition-all duration-300 shadow-[0_5px_20px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.5)] hover:scale-[1.08] hover:shadow-[0_8px_25px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.5)] cursor-pointer">View
+                                class="px-7 py-3 bg-white text-plum rounded-full font-bold text-xs uppercase tracking-wider shadow-xl hover:scale-105 transition-transform cursor-pointer">View
                                 Case Study</button>
                         </div>
                     </div>
-                    <div class="p-[25px_30px_30px]">
-                        <h3 class="text-2xl mb-3 text-black font-serif font-bold">Company Website</h3>
-                        <p class="text-sm leading-[1.7] opacity-80 mb-5">A comprehensive corporate web presence focusing
-                            on brand storytelling, service showcase, and professional engagement.</p>
-                        <div class="flex flex-wrap gap-2">
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-baseline mb-3">
+                            <h3
+                                class="text-2xl text-midnight font-serif font-bold group-hover:text-plum transition-colors">
+                                Company Website</h3>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-plum/50">2024</span>
+                        </div>
+                        <p class="text-sm leading-relaxed text-midnight/70 mb-6 flex-grow">A corporate web presence
+                            focusing on brand storytelling and professional engagement.</p>
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-plum/5">
                             <span
-                                class="px-[18px] py-[7px] bg-white/8 rounded-[25px] text-xs font-medium border border-white/15 transition-all duration-300 shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.05),2px_2px_8px_rgba(0,0,0,0.1)] hover:bg-white/15 hover:-translate-y-0.5 hover:shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.1),3px_3px_10px_rgba(0,0,0,0.15)]">Web
-                                Design</span>
+                                class="px-3 py-1.5 bg-plum/5 text-plum rounded-full text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5 border border-plum/10 hover:bg-plum/10 transition-all">
+                                <i class="fas fa-globe text-[8px]"></i> Web Design
+                            </span>
                             <span
-                                class="px-[18px] py-[7px] bg-white/8 rounded-[25px] text-xs font-medium border border-white/15 transition-all duration-300 shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.05),2px_2px_8px_rgba(0,0,0,0.1)] hover:bg-white/15 hover:-translate-y-0.5 hover:shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.1),3px_3px_10px_rgba(0,0,0,0.15)]">Branding</span>
-                            <span
-                                class="px-[18px] py-[7px] bg-white/8 rounded-[25px] text-xs font-medium border border-white/15 transition-all duration-300 shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.05),2px_2px_8px_rgba(0,0,0,0.1)] hover:bg-white/15 hover:-translate-y-0.5 hover:shadow-[inset_-2px_-2px_5px_rgba(255,255,255,0.1),3px_3px_10px_rgba(0,0,0,0.15)]">UI/UX</span>
+                                class="px-3 py-1.5 bg-plum/5 text-plum rounded-full text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5 border border-plum/10 hover:bg-plum/10 transition-all">
+                                <i class="fas fa-fingerprint text-[8px]"></i> Branding
+                            </span>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- Resume Section -->
-        <section id="resume" class="section-padding min-h-screen flex flex-col justify-center bg-process text-black">
-            <div class="flex justify-between items-center mb-[60px]">
-                <h2 class="text-5xl font-serif font-bold tracking-tight text-black">Resume & Experience</h2>
-                <a href="public/resume.pdf" target="_blank" download="shaurya_singh_resume.pdf"
-                    class="bg-white text-process px-8 py-3 rounded-[30px] no-underline font-semibold transition-transform hover:scale-105">Download
-                    Resume</a>
+        <!-- Resume & Experience Section -->
+        <section id="resume" class="section-padding bg-hero text-midnight relative overflow-hidden">
+            <!-- Background Decoration -->
+            <div
+                class="absolute -top-[10%] -right-[5%] w-[400px] h-[400px] bg-plum/5 rounded-full blur-[100px] pointer-events-none">
             </div>
-            <div class="grid grid-cols-2 gap-x-[80px] gap-y-[20px]">
-                <div>
-                    <h3 class="text-2xl mb-8 opacity-40 font-serif">Education</h3>
-                    <div
-                        class="bg-black/5 p-8 rounded-custom mb-6 border border-black/10 shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.05),10px_10px_30px_rgba(0,0,0,0.1)]">
-                        <span class="text-sm opacity-70">2022 - 2026</span>
-                        <p class="text-xl font-bold my-1.5 text-black">B.Tech in CSE</p>
-                        <p>Bennett University (cgpa: 7.85)</p>
+
+            <div class="max-w-[1240px] mx-auto px-6 relative z-10">
+                <!-- Header -->
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-8">
+                    <div class="max-w-[1200px]">
+
+                        <h2
+                            class="text-4xl md:text-5xl font-serif font-bold tracking-tight text-midnight leading-tight">
+                            Resume & <br class="hidden md:block"> Experience</h2>
                     </div>
-                    <div
-                        class="bg-black/5 p-8 rounded-custom mb-6 border border-black/10 shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.05),10px_10px_30px_rgba(0,0,0,0.1)]">
-                        <span class="text-sm opacity-70">2020 - 2021</span>
-                        <p class="text-xl font-bold my-1.5 text-black">LASEA (82%)</p>
-                        <p>Schooling</p>
-                    </div>
-                    <div
-                        class="bg-black/5 p-8 rounded-custom border border-black/10 shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.05),10px_10px_30px_rgba(0,0,0,0.1)]">
-                        <span class="text-sm opacity-70">2018 - 2019</span>
-                        <p class="text-xl font-bold my-1.5 text-black">Delhi Public School (90%)</p>
-                        <p>Secondary Education</p>
-                    </div>
+                    <a href="public/resume.pdf" target="_blank" download="shaurya_singh_resume.pdf"
+                        class="group flex items-center gap-4 bg-midnight text-white px-8 py-4 rounded-full font-bold text-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-plum/20">
+                        <div class="flex flex-col items-start leading-none">
+                            <span class="text-[10px] opacity-60 uppercase tracking-widest mb-1">PDF • Updated</span>
+                            <span>Download Resume</span>
+                        </div>
+                        <div
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                            <i class="fas fa-download text-sm"></i>
+                        </div>
+                    </a>
                 </div>
-                <div>
-                    <h3 class="text-2xl mb-8 opacity-40 font-serif">Experience</h3>
-                    <div
-                        class="bg-black/5 p-8 rounded-custom mb-6 border border-black/10 shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.05),10px_10px_30px_rgba(0,0,0,0.1)]">
-                        <span class="text-sm opacity-70">Feb 25 - Sep 25</span>
-                        <p class="text-xl font-bold my-1.5 text-black">UX UI Designer</p>
-                        <p>Touch Computing Technologies Pvt Ltd</p>
-                        <ul class="mt-4 pl-4 list-disc">
-                            <li class="text-sm opacity-80 mb-1.5">Designed wireframes, prototypes, and responsive UI for
-                                a cloud-based OS.</li>
-                            <li class="text-sm opacity-80 mb-1.5">Collaborated with developers to implement user-centric
-                                designs.</li>
-                        </ul>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+                    <!-- Left Column: Education -->
+                    <div class="lg:col-span-4">
+                        <h3 class="text-2xl font-serif font-bold text-plum mb-10 pb-4 border-b border-plum/10">Academic
+                            Path</h3>
+
+                        <div class="space-y-12">
+                            <!-- Education Entry -->
+                            <div class="relative">
+                                <span
+                                    class="text-[10px] font-bold text-plum/40 uppercase tracking-widest mb-2 block">2022
+                                    — 2026</span>
+                                <h4 class="text-xl font-bold text-midnight mb-1">B.Tech in CSE</h4>
+                                <p class="text-plum font-medium mb-3">Bennett University</p>
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="text-xs px-2.5 py-1 bg-plum/10 text-plum rounded-full font-bold tracking-wider uppercase">cgpa:
+                                        7.93</span>
+                                </div>
+                            </div>
+
+                            <div class="relative">
+                                <span
+                                    class="text-[10px] font-bold text-plum/40 uppercase tracking-widest mb-2 block">2020
+                                    — 2021</span>
+                                <h4 class="text-xl font-bold text-midnight mb-1">Senior Secondary</h4>
+                                <p class="text-plum font-medium mb-3">LASEA Schooling</p>
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="text-xs px-2.5 py-1 bg-plum/10 text-plum rounded-full font-bold tracking-wider uppercase">Score:
+                                        82%</span>
+                                </div>
+                            </div>
+
+                            <div class="relative">
+                                <span
+                                    class="text-[10px] font-bold text-plum/40 uppercase tracking-widest mb-2 block">2018
+                                    — 2019</span>
+                                <h4 class="text-xl font-bold text-midnight mb-1">Secondary Education</h4>
+                                <p class="text-plum font-medium mb-3">Delhi Public School</p>
+                                <div class="flex items-center gap-2">
+                                    <span
+                                        class="text-xs px-2.5 py-1 bg-plum/10 text-plum rounded-full font-bold tracking-wider uppercase">Score:
+                                        90%</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div
-                        class="bg-black/5 p-8 rounded-custom border border-black/10 shadow-[inset_-5px_-5px_15px_rgba(255,255,255,0.05),10px_10px_30px_rgba(0,0,0,0.1)]">
-                        <span class="text-sm opacity-70">Sep 24 - Dec 24</span>
-                        <p class="text-xl font-bold my-1.5 text-black">UX UI Designer</p>
-                        <p>Brikow</p>
-                        <ul class="mt-4 pl-4 list-disc">
-                            <li class="text-sm opacity-80 mb-1.5">Conducted user research and created wireframes for new
-                                features.</li>
-                            <li class="text-sm opacity-80 mb-1.5">Assisted in the development of high-fidelity
-                                prototypes.</li>
-                        </ul>
+
+                    <!-- Right Column: Experience Timeline -->
+                    <div class="lg:col-span-8">
+                        <h3 class="text-2xl font-serif font-bold text-plum mb-10 pb-4 border-b border-plum/10">
+                            Professional Journey</h3>
+
+                        <div class="timeline-container space-y-12">
+                            <!-- Milestone 1 -->
+                            <div class="relative">
+                                <div class="timeline-dot"></div>
+                                <div class="editorial-panel">
+                                    <div
+                                        class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                                        <div>
+                                            <h4 class="text-2xl font-bold text-midnight mb-1">UX UI Designer</h4>
+                                            <p class="text-plum font-semibold">Touch Computing Technologies Pvt Ltd</p>
+                                        </div>
+                                        <span
+                                            class="text-xs font-bold px-4 py-2 bg-plum text-white rounded-full uppercase tracking-widest whitespace-nowrap shadow-lg shadow-plum/10">Feb
+                                            25 — Sep 25</span>
+                                    </div>
+                                    <ul class="space-y-4 mb-8">
+                                        <li class="flex items-start gap-3">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-plum/30 mt-2 shrink-0"></span>
+                                            <p class="text-sm leading-relaxed text-midnight/80">Designed high-fidelity
+                                                wireframes, complex prototypes, and responsive UI systems for a
+                                                cutting-edge cloud-based OS.</p>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-plum/30 mt-2 shrink-0"></span>
+                                            <p class="text-sm leading-relaxed text-midnight/80">Collaborated directly
+                                                with engineering teams to bridge design-to-code gaps and ensure
+                                                pixel-perfect implementation.</p>
+                                        </li>
+                                    </ul>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="text-[9px] font-bold uppercase tracking-wider px-3 py-1.5 bg-midnight/5 text-midnight/60 rounded-lg border border-midnight/5">Figma</span>
+                                        <span
+                                            class="text-[9px] font-bold uppercase tracking-wider px-3 py-1.5 bg-midnight/5 text-midnight/60 rounded-lg border border-midnight/5">Cloud
+                                            OS</span>
+                                        <span
+                                            class="text-[9px] font-bold uppercase tracking-wider px-3 py-1.5 bg-midnight/5 text-midnight/60 rounded-lg border border-midnight/5">Prototyping</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Milestone 2 -->
+                            <div class="relative">
+                                <div class="timeline-dot"></div>
+                                <div class="editorial-panel">
+                                    <div
+                                        class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+                                        <div>
+                                            <h4 class="text-2xl font-bold text-midnight mb-1">UX UI Designer</h4>
+                                            <p class="text-plum font-semibold">Brikow</p>
+                                        </div>
+                                        <span
+                                            class="text-xs font-bold px-4 py-2 bg-plum/10 text-plum rounded-full uppercase tracking-widest whitespace-nowrap border border-plum/10">Sep
+                                            24 — Dec 24</span>
+                                    </div>
+                                    <ul class="space-y-4 mb-8">
+                                        <li class="flex items-start gap-3">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-plum/30 mt-2 shrink-0"></span>
+                                            <p class="text-sm leading-relaxed text-midnight/80">Conducted user research
+                                                sessions to extract pain points and translated insights into iterative
+                                                wireframe solutions.</p>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-plum/30 mt-2 shrink-0"></span>
+                                            <p class="text-sm leading-relaxed text-midnight/80">Developed high-fidelity
+                                                interactions that improved user engagement metrics across key feature
+                                                flows.</p>
+                                        </li>
+                                    </ul>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="text-[9px] font-bold uppercase tracking-wider px-3 py-1.5 bg-midnight/5 text-midnight/60 rounded-lg border border-midnight/5">User
+                                            Research</span>
+                                        <span
+                                            class="text-[9px] font-bold uppercase tracking-wider px-3 py-1.5 bg-midnight/5 text-midnight/60 rounded-lg border border-midnight/5">Low-Fi
+                                            Wireframing</span>
+                                        <span
+                                            class="text-[9px] font-bold uppercase tracking-wider px-3 py-1.5 bg-midnight/5 text-midnight/60 rounded-lg border border-midnight/5">Motion</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact"
-            class="section-padding min-h-screen flex flex-col justify-center bg-dark text-black items-center relative overflow-hidden">
-
-            <!-- Right Side Decoration -->
+        <section id="contact" class="section-padding bg-dark text-white relative overflow-hidden py-24 md:py-32">
+            <!-- Decoration Elements -->
             <div
-                class="absolute right-0 md:right-5 top-[55%] -translate-y-1/2 w-[400px] md:w-[600px] pointer-events-none opacity-80 hidden md:block z-0">
-                <img src="/assets/Group 4.png" alt="" class="w-full h-auto" />
+                class="absolute -bottom-[10%] -left-[5%] w-[500px] h-[500px] bg-plum/10 rounded-full blur-[120px] pointer-events-none">
+            </div>
+            <div
+                class="absolute top-[20%] right-[10%] w-[300px] h-[300px] bg-mauve-deep/5 rounded-full blur-[100px] pointer-events-none border border-white/5">
             </div>
 
             <div
-                class="w-full max-w-[1200px] flex flex-col md:flex-row items-center md:items-start justify-between relative z-10 px-10">
-                <div class="max-w-[600px] text-center md:text-left">
-                    <h2 class="text-5xl font-serif font-bold mb-6 tracking-tight">Contact Me</h2>
-                    <p class="text-xl md:text-2xl opacity-70 mb-12 font-light leading-relaxed">
-                        Have a project in mind or just want to say hello? Let's create something extraordinary together.
-                    </p>
+                class="w-full max-w-[1240px] mx-auto flex flex-col md:flex-row items-center justify-between relative z-10 px-6 md:px-10 gap-16 md:gap-24">
 
-                    <div class="flex flex-col gap-8">
+                <!-- Left Side: Content -->
+                <div class="space-y-12 w-full md:w-1/2">
+                    <div class="max-w-[540px]">
+                        <span class="text-[10px] uppercase font-bold tracking-[0.4em] text-white/40 mb-4 block">Let's
+                            Connect</span>
+                        <h2
+                            class="text-4xl md:text-5xl font-serif font-bold tracking-tight text-white mb-6 leading-[1.1]">
+                            Contact Me</h2>
+                        <p class="text-lg text-white/70 leading-relaxed font-sans mt-8">
+                            I'm always open to discussing new projects, creative ideas or opportunities to be part of
+                            your visions.
+                        </p>
+                    </div>
+
+                    <!-- Email Component -->
+                    <div class="group relative inline-block">
                         <a href="mailto:shauryasingh2093@gmail.com"
-                            class="group flex items-center gap-4 text-2xl md:text-3xl font-medium hover:opacity-70 transition-all">
-                            <span
-                                class="w-12 h-12 rounded-full border border-black/20 flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all text-black">
-                                <i class="fas fa-envelope text-sm"></i>
-                            </span>
-                            shauryasingh2093@gmail.com
+                            class="flex items-center gap-6 p-1 pr-8 bg-white/5 backdrop-blur-md rounded-full border border-white/10 transition-all duration-500 hover:bg-white/10 hover:-translate-y-1 hover:shadow-2xl hover:shadow-plum/30">
+                            <div
+                                class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center text-xl transition-transform duration-500 group-hover:scale-110">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div class="flex flex-col text-left">
+                                <span
+                                    class="text-[9px] uppercase font-bold tracking-widest text-white/40 mb-0.5">Contact
+                                    via Email</span>
+                                <span
+                                    class="text-base sm:text-lg md:text-xl font-medium tracking-tight whitespace-nowrap overflow-hidden text-ellipsis max-w-[200px] sm:max-w-none">shauryasingh2093@gmail.com</span>
+                            </div>
                         </a>
+                    </div>
 
-                        <div class="flex gap-6 mt-4">
-                            <a href="https://www.linkedin.com/in/shauryasingh2093" target="_blank"
-                                class="w-14 h-14 rounded-full border border-black/20 flex items-center justify-center hover:bg-black hover:text-white transition-all text-black">
-                                <i class="fab fa-linkedin-in text-xl"></i>
+                    <!-- Social Links -->
+                    <div class="pt-8 border-t border-white/5">
+                        <span class="text-[10px] uppercase font-bold tracking-[0.2em] text-white/30 mb-6 block">Follow
+                            the Journey</span>
+                        <div class="flex gap-4">
+                            <a href="https://www.linkedin.com/in/shauryasiiingh/" target="_blank"
+                                class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/60 transition-all duration-300 hover:text-white hover:border-white hover:bg-white/5 hover:-translate-y-1 hover:shadow-lg hover:shadow-white/5">
+                                <i class="fab fa-linkedin-in text-lg"></i>
                             </a>
                             <a href="https://www.behance.net/shauryasingh2093" target="_blank"
-                                class="w-14 h-14 rounded-full border border-black/20 flex items-center justify-center hover:bg-black hover:text-white transition-all text-black">
-                                <i class="fab fa-behance text-xl"></i>
+                                class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/60 transition-all duration-300 hover:text-white hover:border-white hover:bg-white/5 hover:-translate-y-1 hover:shadow-lg hover:shadow-white/5">
+                                <i class="fab fa-behance text-lg"></i>
                             </a>
-                            <a href="https://in.pinterest.com/shaurya020singh/" target="_blank"
-                                class="w-14 h-14 rounded-full border border-black/20 flex items-center justify-center hover:bg-black hover:text-white transition-all text-black">
-                                <i class="fab fa-pinterest text-xl"></i>
+                            <a href="https://dribbble.com/" target="_blank"
+                                class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/60 transition-all duration-300 hover:text-white hover:border-white hover:bg-white/5 hover:-translate-y-1 hover:shadow-lg hover:shadow-white/5">
+                                <i class="fab fa-dribbble text-lg"></i>
+                            </a>
+                            <a href="https://github.com/shauryasiiingh" target="_blank"
+                                class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/60 transition-all duration-300 hover:text-white hover:border-white hover:bg-white/5 hover:-translate-y-1 hover:shadow-lg hover:shadow-white/5">
+                                <i class="fab fa-github text-lg"></i>
                             </a>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Phone Mockup -->
+                <div class="relative flex justify-center items-center py-12 w-full md:w-1/2">
+                    <!-- Background Glow behind phone -->
+                    <div class="absolute w-[300px] h-[300px] bg-plum/20 rounded-full blur-[80px] opacity-60"></div>
+
+                    <!-- Floating Device Mockup -->
+                    <div class="relative z-10 transition-transform duration-[2000ms] motion-safe:animate-bounce-slow">
+                        <img src="/assets/Group 4.png" alt="Contact Visual"
+                            class="w-full max-w-[500px] h-auto drop-shadow-2xl">
                     </div>
                 </div>
             </div>
